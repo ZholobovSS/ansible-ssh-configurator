@@ -1,0 +1,19 @@
+Include /etc/ssh/sshd_config.d/*.conf
+
+Port {{ ssh_port }}
+
+PermitRootLogin {{ permit_root_login_value }}
+PubkeyAuthentication {{ pubkey_authentication_value }}
+PasswordAuthentication {{ password_authentication_value }}
+PermitEmptyPasswords {{ permit_empty_passwords_value }}
+
+KbdInteractiveAuthentication no
+
+UsePAM yes
+
+X11Forwarding yes
+PrintMotd no
+
+AcceptEnv LANG LC_*
+
+Subsystem	sftp	/usr/lib/openssh/sftp-server

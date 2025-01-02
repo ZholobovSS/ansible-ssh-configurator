@@ -1,0 +1,9 @@
+---
+- name: "Check vars"
+  ansible.builtin.include_tasks: vars.yaml
+
+- name: "Ufw configuration"
+  ansible.builtin.include_tasks: ufw.yaml
+
+- name: "SSH configuration"
+  ansible.builtin.include_tasks: ssh.yaml

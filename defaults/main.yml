@@ -1,0 +1,6 @@
+---
+ssh_port:
+permit_root_login_value: "no"
+pubkey_authentication_value: "yes"
+password_authentication_value: "no"
+permit_empty_passwords_value: "no"

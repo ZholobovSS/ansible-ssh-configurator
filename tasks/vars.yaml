@@ -1,0 +1,18 @@
+---
+
+- name: "Check value of 'ssh_port' variable"
+  ansible.builtin.fail:
+    msg: "You should set value of 'ssh_port' variable"
+  when: ssh_port == None
+
+- name: Checks vars
+  ansible.builtin.fail:
+    msg: |
+      "You should set correct value of '{{ item }}' variable: 'yes' or 'no'"
+      "Current value is '{{ lookup('vars', item) }}'"
+  when: lookup('vars', item) != "no" and lookup('vars', item) != "yes"
+  loop:
+    - permit_root_login_value
+    - pubkey_authentication_value
+    - password_authentication_value
+    - permit_empty_passwords_value

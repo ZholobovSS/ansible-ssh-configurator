@@ -1,0 +1,9 @@
+galaxy_info:
+  author: Жолобов Семён Сергеевич
+  description: Ansible role для базовой настройки ssh
+  license: MIT
+  min_ansible_version: "2.1"
+
+  galaxy_tags: []
+
+dependencies: []
