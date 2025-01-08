@@ -1,5 +1,4 @@
 ---
-
 - name: "Check value of 'ssh_port' variable"
   ansible.builtin.fail:
     msg: "You should set value of 'ssh_port' variable"

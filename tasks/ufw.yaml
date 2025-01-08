@@ -22,5 +22,3 @@
     port: 22
     proto: any
   when: ssh_port != 22
-
-
